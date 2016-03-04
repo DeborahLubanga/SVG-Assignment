@@ -4,7 +4,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Deborah's Remixi</title>
+		<title>Deborah's Remix</title>
 		<style>
 			body {background-color:#eee7dd}
 			
@@ -17,26 +17,38 @@
 				to {opacity: 1}}
 			
 			.thebox{fill:url(#SVGID_1_);
+					transition-property: opacity;
+					transition-duration: 1s;
+					transition-timing-function: ease-in-out;
+					animation-direction: alternate-reverse;}
+			
+			.thebox2{fill:url(#SVGID_3_);
 							}
 			
 			.innerstar{fill:none;}
 			
 			.thestar{fill:url(#SVGID_3_);
 				animation-name: fading;
-				animation-duration: 5s;
-				animation-iteration-count:1;}
+				animation-duration: 3s;
+				animation-iteration-count:2;
+				transition-property: opacity;
+				transition-duration: 1s;
+				transition-timing-function: ease-in-out;
+				animation-direction: alternate-reverse;}
+			
+			.thestar2{fill: url(#SVGID_1_);
+						}
 			
 			.thewelcome{fill:none;}
 			
 		
-			.thebox:hover{fill:url(#SVGID_3_);}
+			.thebox:hover{opacity:0;}
 								
-			.thestar:hover{fill:url(#SVGID_1_)}
+			.thestar:active{fill: #eee7dd}
 			
-			.thestar:active{opacity:0;}
+			.thestar:hover{opacity:0;}
 			
-			.thestar{transition-property: opacity;
-				transition-duration: 1s;}
+		
 			
 			
 		</style>
@@ -48,6 +60,15 @@
 		<div class = "container">
 			<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="685.999px" height="617.969px" viewBox="0 0 685.999 617.969" style="enable-background:new 0 0 685.999 617.969;" xml:space="preserve">
 
+				<g id="box2">
+					<g>
+						<path class="thebox2" d="M635.772,14.083H72.224c-7.136,0-12.919,5.783-12.919,12.918v563.551c0,7.135,5.783,12.918,12.919,12.918
+							h563.548c7.133,0,12.918-5.783,12.918-12.918V27.001C648.69,19.866,642.905,14.083,635.772,14.083z M353.997,517.999
+							c-115.549,0-209.22-93.674-209.22-209.22c0-115.552,93.671-209.224,209.22-209.224s209.221,93.672,209.221,209.224
+							C563.218,424.325,469.546,517.999,353.997,517.999z"/>
+					</g>
+				</g>
+			
 				<g id="box">
 					<g>
 						<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="63.0884" y1="17.8672" x2="644.9081" y2="599.687">
@@ -74,7 +95,13 @@
 							353.997,378.421 422.738,414.557 409.611,338.014 465.224,283.806 		"/>
 					</g>
 				</g>
+			
+				<g id="star2">				
+					<polygon class="thestar2" points="354.091,172.306 398.462,262.21 497.678,276.627 425.886,346.609 442.833,445.423 354.091,398.769 
+						265.35,445.423 282.299,346.609 210.505,276.627 309.721,262.21 	"/>	
+				</g>
 				
+			
 				<g id="star">
 					<a xlink:href = "http://www.nyu.edu">
 					<radialGradient id="SVGID_3_" cx="354.0908" cy="308.8647" r="140.1168" gradientUnits="userSpaceOnUse">
@@ -88,6 +115,7 @@
 					</a>
 				</g>
 				
+			
 				<g id="welcome">
 					<g>
 						<rect x="58.805" y="297.461" class="thewelcome" width="584.885" height="77.996"/>
